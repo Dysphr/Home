@@ -1,0 +1,69 @@
+/* General text styles */ 
+.mainH {                                    /* Titles */ 
+    color: #ffff00; 
+    font-size:64px;
+}
+
+.textR {                                     /* Regular text */
+    color: #5BCEFA; 
+    font-size:32px;
+}
+
+.textS {                                     /* sub sub text */
+    color: #ffff00; 
+    font-size:32px;
+    text-decoration: underline;
+}
+
+body {                                  /* Background + font */
+    font-family: Arial, sans-serif;
+    background-color: #404040;
+}
+
+ul {                                    /* List */
+    color: #c0c0c0;
+    font-size:32px
+}
+
+.border {                                    /* Dividers */
+    border: 4px outset #c0c0c0;
+}
+.dividerP {                                  
+    border: 8px inset #F5A9B8;
+}
+.dividerY {                                 
+    border: 8px outset #ffff00;
+}
+
+/* Classes */ 
+.subH {                                 /* Subheadings */
+    color: #b800ff;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Link styles */ 
+a:link {
+    color: #F5A9B8;
+    background-color: transparent;
+    text-decoration: none;
+}
+  
+a:visited {
+    color: #5BCEFA;
+    background-color: transparent;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #ff7f99;
+    background-color: transparent;
+    text-decoration: underline;
+}
+  
+a:active {
+    color: #00ffff;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
