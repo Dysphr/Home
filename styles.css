@@ -16,9 +16,11 @@
 }
 
 body {                                  /* Background + font */
-    font-family: Arial, sans-serif;
     background-color: #404040;
-}
+    font-family: "Fredoka", sans-serif;
+    font-style: normal;
+  }
+    
 
 ul {                                    /* List */
     color: #c0c0c0;
@@ -33,6 +35,12 @@ ul {                                    /* List */
 }
 .dividerY {                                 
     border: 8px outset #ffff00;
+}
+.weirdT {                                 
+    border: 32px outset #ffff00;
+}
+.weirdB {                                 
+    border:32px outset #b800ff;
 }
 
 /* Classes */ 
