@@ -2,20 +2,18 @@
 .mainH {                                    /* Titles */ 
     color: #ffff00; 
     font-size:64px;
-    line-height: 0;
+    line-height: 0.25;
 }
 
 .textR {                                     /* Regular text */
     color: #5BCEFA; 
     font-size:32px;
-    line-height: 1;
 }
 
 .textS {                                     /* sub sub text */
     color: #ffff00; 
     font-size:32px;
     text-decoration: underline;
-    line-height: 1;
 }
 
 body {                                  /* Background + font */
