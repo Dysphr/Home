@@ -5,6 +5,16 @@
     line-height: 0.25;
 }
 
+.warningB {                                     /* Regular text */
+    color: #ffa040; 
+    font-size:64px;
+}
+
+.warningS {                                     /* sub sub text */
+    color: #ff0000; 
+    font-size:32px;
+}
+
 .textR {                                     /* Regular text */
     color: #5BCEFA; 
     font-size:32px;
