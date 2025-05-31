@@ -32,7 +32,12 @@ body {                                  /* Background + font */
     font-style: normal;
   }
     
-ul {                                    /* List */
+ul {                                    /* dot List */
+    color: #c0c0c0;
+    font-size:32px
+}
+
+ol {                                    /* num List */
     color: #c0c0c0;
     font-size:32px
 }
