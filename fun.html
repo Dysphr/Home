@@ -10,7 +10,7 @@
 <body>
 
 <audio autoplay loop>
-  <source src="lagtrain.mp3" type="audio/mpeg">
+  <source src="\Assets\lagtrain.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>  
 
@@ -23,8 +23,109 @@
 <hr class="border">
 
 <!-- blank -->
-<p class="subH" class="border">[client error]</p>
-<p class="textR">[client error]</p>
+<p class="subH" class="border">Text (de/en)coder</p>
+<p class="textR">Takes inputted text and (optional) key to scramble messages. Create keys with friends to send them coded messages!</p>
+
+<h2 class="textS">Scrambler</h2>
+  <div class="row">
+    <div class="grid">
+      <div>
+        <label>Text IN</label>
+        <textarea id="scrambleTextIn" rows="4"></textarea>
+      </div>
+      <div>
+        <label>Key IN</label>
+        <input id="scrambleKeyIn" type="text">
+      </div>
+      <div>
+        <label>Text OUT</label>
+        <textarea id="scrambleTextOut" rows="4" readonly></textarea>
+      </div>
+      <div>
+        <label>Key OUT</label>
+        <input id="scrambleKeyOut" type="text" readonly>
+      </div>
+    </div>
+    <button onclick="scramble()">Scramble</button>
+  </div>
+
+  <h2 class="textS">Descrambler</h2>
+  <div class="row">
+    <div class="grid">
+      <div>
+        <label>Text IN</label>
+        <textarea id="descrambleTextIn" rows="4"></textarea>
+      </div>
+      <div>
+        <label>Key IN</label>
+        <input id="descrambleKeyIn" type="text">
+      </div>
+      <div>
+        <label>Text OUT</label>
+        <textarea id="descrambleTextOut" rows="4" readonly></textarea>
+      </div>
+      <div>
+        <label>Key OUT</label>
+        <input id="descrambleKeyOut" type="text" readonly>
+      </div>
+    </div>
+    <button onclick="descramble()">Descramble</button>
+  </div>
+
+<script>
+  const charset = [..."abcdefghijklmnopqrstuvwxyz!? 0123456789#()[]_-+/*=<>.,@:;^'~%£$\|"];
+  const ref = "abcdefgh";
+
+  function randomKey() {
+    return Array.from({length: 8}, () => charset[Math.floor(Math.random() * charset.length)]).join('');
+  }
+
+  function getShiftValues(key) {
+    return key.toLowerCase().split('').map((k, i) => charset.indexOf(k) - charset.indexOf(ref[i]));
+  }
+
+  function shiftChar(char, shift) {
+    const lower = char.toLowerCase();
+    if (charset.includes(lower)) {
+      let idx = charset.indexOf(lower);
+      let newIdx = (idx + shift + charset.length) % charset.length;
+      let newChar = charset[newIdx];
+      if (/[a-z]/i.test(char)) {
+        return char === char.toUpperCase() ? newChar.toUpperCase() : newChar;
+      }
+      return newChar;
+    }
+    return /[a-z]/i.test(char) ? '?' : '?'.toLowerCase();
+  }
+
+  function scrambleText(text, key) {
+    const shifts = getShiftValues(key);
+    return text.split('').map((char, i) =>
+      shiftChar(char, shifts[i % shifts.length])
+    ).join('');
+  }
+
+  function descrambleText(text, key) {
+    const shifts = getShiftValues(key);
+    return text.split('').map((char, i) =>
+      shiftChar(char, -shifts[i % shifts.length])
+    ).join('');
+  }
+
+  function scramble() {
+    let textIn = document.getElementById('scrambleTextIn').value;
+    let keyIn = document.getElementById('scrambleKeyIn').value || randomKey();
+    document.getElementById('scrambleKeyOut').value = keyIn;
+    document.getElementById('scrambleTextOut').value = scrambleText(textIn, keyIn);
+  }
+
+  function descramble() {
+    let textIn = document.getElementById('descrambleTextIn').value;
+    let keyIn = document.getElementById('descrambleKeyIn').value || randomKey();
+    document.getElementById('descrambleKeyOut').value = keyIn;
+    document.getElementById('descrambleTextOut').value = descrambleText(textIn, keyIn);
+  }
+</script>
 <hr class="border">
 
 <!-- blank -->
