@@ -25,7 +25,6 @@
 <!-- blank -->
 <p class="subH" class="border">Text (de/en)coder</p>
 <p class="textR">Takes inputted text and (optional) key to scramble messages. Create keys with friends to send them coded messages!</p>
-<p class="textR">MESSAGES MADE BEFORE <u>24/06/2025 AT 2105GMT</u>, USE <a href="https://web.archive.org/web/20250622170849/https://dysphr.github.io/Home/fun.html">THIS</a>!</p>
 
 <h2 class="textS">Scrambler</h2>
   <div class="row">
@@ -74,8 +73,8 @@
   </div>
 
 <script>
-  const charset = [..."abcdefghijklmnopqrstuvwxyz!? 0123456789#ABCDEFGHIJKLMNOPQRSTUVWXYZ()[]_-+/*=<>.,@:;^'~%£$\|&"];
-  const ref = "abcdefghijklmnopqrstuvwxyz!? 0123456789#ABCDEFGHIJKLMNOPQRSTUVWXYZ()[]_-+/*=<>.,@:;^'~%£$\|&";
+  const charset = [..."abcdefghijklmnopqrstuvwxyz!? 0123456789#()[]_-+/*=<>.,@:;^'~%£$\|"];
+  const ref = "abcdefgh";
 
   function randomKey() {
     return Array.from({length: 8}, () => charset[Math.floor(Math.random() * charset.length)]).join('');
