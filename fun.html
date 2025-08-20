@@ -73,8 +73,8 @@
   </div>
 
 <script>
-  const charset = [..."abcdefghijklmnopqrstuvwxyz!? 0123456789#()[]_-+/*=<>.,@:;^'~%£$\|"];
-  const ref = "abcdefgh";
+  const charset = [..."abcdefghijklmnopqrstuvwxyz!? 0123456789#ABCDEFGHIJKLMNOPQRSTUVWXYZ()[]_-+/*=<>.,@:;^'~%£$\|&"];
+  const ref = "abcdefghijklmnopqrstuvwxyz!? 0123456789#ABCDEFGHIJKLMNOPQRSTUVWXYZ()[]_-+/*=<>.,@:;^'~%£$\|&";
 
   function randomKey() {
     return Array.from({length: 8}, () => charset[Math.floor(Math.random() * charset.length)]).join('');
@@ -95,7 +95,6 @@
       }
       return newChar;
     }
-    return /[a-z]/i.test(char) ? '?' : '?'.toLowerCase();
   }
 
   function scrambleText(text, key) {

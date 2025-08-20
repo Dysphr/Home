@@ -9,6 +9,45 @@
 
 <body>
 
+<div class="top-bar">
+     <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+        <a href="https://www.roblox.com/" class="logo-link">
+        <img src="\Assets\Default - Static.png" alt="Logo" class="logo">
+        </a>
+    </div>
+<div class="sidebar" id="sidebar">
+    <div class="dropdown">
+        <button class="dropbtn">Me</button>
+        <div class="dropdown-content">
+            <a href="#">Topic 1</a>
+            <a href="#">Topic 2</a>
+            <a href="#">Topic 3</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Website</button>
+        <div class="dropdown-content">
+            <a href="#">Topic 1</a>
+            <a href="#">Topic 2</a>
+            <a href="#">Topic 3</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">fuck</button>
+        <div class="dropdown-content">
+            <a href="#">Topic 1</a>
+            <a href="#">Topic 2</a>
+            <a href="#">Topic 3</a>
+        </div>
+    </div>
+</div>
+    
+      <script>
+        function toggleSidebar() {
+          document.getElementById("sidebar").classList.toggle("active");
+        }
+      </script>
+
 <!-- Yellow -->
 <hr class="weirdT">  
 
@@ -18,14 +57,13 @@
 
 <!-- About me -->
 <p class="subH" class="border">About me:</p>
-<p class="textR">I would recommend <a href="aboutme.html">reading more</a>.</p>
+<p class="textR">I am a<a href="aboutme.html">...</a>
 <hr class="border">
 
 <!-- Social Media -->
 <p class="subH">My various accounts:</p>
 <ul>
-  <li class="dividerP"><a href="https://www.discord.com/users/dysphr/">Discord main (@dysphr)</a></li>
-  <dd class="dividerP"><a href="https://www.discord.com/users/euphr/">Discord alt' (@euphr)</a></dd>  
+  <li class="dividerP"><a href="https://www.discord.com/users/dysphr/">Discord (@dysphr)</a></li>  
   <li class="dividerP"><a href="https://github.com/Dysphr">GitHub</a></li>
   <li class="dividerP"><a href="https://www.planetminecraft.com/member/dysphr/">PMC</a></li>
   <li class="dividerP"><a href="https://www.roblox.com/users/1214309469/profile">Roblox</a></li>
@@ -44,9 +82,6 @@
   <li class="dividerP"><a href="halloffame.html">Internet hall of fame</a></li>
   <li class="dividerP"><a href="music.html">Music</a></li>
   <li class="dividerP"><a href="https://www.youtube.com/watch?v=Sk-U8ruIQyA">n/a</a></li>
-  <li class="dividerP"><a href="snickersnoodle.html">Snickersnoodle</a></li>
-  <li class="dividerP"><a href="regret.html">regret</a></li>
-  <li class="dividerP"><a href="sorry.html">sorry</a></li>
 </ul>
 <hr class="border">
 
