@@ -9,27 +9,37 @@ DYSPHR PINK #B800FF
     color: #ffff00; 
     font-size:64px;
     line-height: 0.25;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 .warningB {                                     /* warning text */
     color: #ffa040; 
     font-size:64px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 .warningS {                                     /* warning text */
     color: #ff0000; 
     font-size:32px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 .textR {                                     /* Regular text */
     color: #5BCEFA; 
     font-size:32px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 .textS {                                     /* sub sub text */
     color: #ffff00; 
     font-size:32px;
     text-decoration: underline;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 body {                                  /* Background + font */
@@ -40,7 +50,7 @@ body {                                  /* Background + font */
     
 ul {                                    /* dot List */
     color: #c0c0c0;
-    font-size:32px
+    font-size:32px;
 }
 
 ol {                                    /* num List */
@@ -53,6 +63,8 @@ ol {                                    /* num List */
 }
 .dividerP {                                  
     border: 8px inset #ff8080; /* List sections */
+    margin-left: 32px;
+    margin-right: 32px;
 }
 .dividerY {                                 
     border: 8px outset #ffff00; /* List headers */
@@ -70,6 +82,8 @@ ol {                                    /* num List */
     font-size: 32px;
     font-weight: bold;
     line-height: 0;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 /* Link styles */ 
