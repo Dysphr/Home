@@ -46,7 +46,6 @@ DYSPHR PINK #B800FF
 .textG {                                     /* sub sub sub text */
     color: #c0c0c0; 
     font-size:32px;
-
     margin-left: 32px;
     margin-right: 32px;
 }
@@ -239,4 +238,5 @@ button:active {
 button:focus {
   outline: 4px solid #c0c0c0;
 }
+
 
