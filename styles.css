@@ -41,6 +41,7 @@ DYSPHR PINK #B800FF
     text-decoration: underline;
     margin-left: 32px;
     margin-right: 32px;
+    vertical-align: top;
 }
 
 .textG {                                     /* sub sub sub text */
@@ -48,6 +49,7 @@ DYSPHR PINK #B800FF
     font-size:32px;
     margin-left: 32px;
     margin-right: 32px;
+    vertical-align: top;
 }
 
 table {
